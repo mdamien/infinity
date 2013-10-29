@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %} - *.html</title>
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/cssjumbotron.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">*.html</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="/dropdown" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/action">Action</a></li>
+                <li><a href="/another-action">Another action</a></li>
+                <li><a href="/something-else-here">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="/map">Sitemap</a></li>
+                <li><a href="/map/a">Sitemap of a*.html</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    <div class="jumbotron">
+      <div class="container">
+{% block content %}{% endblock %}
+      </div>
+    </div>
+
+    <div class="container">
+      <hr>
+
+      <footer>
+        <p>*.html by dam.io</p>
+      </footer>
+    </div> <!-- /container -->
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+  </body>
+</html>

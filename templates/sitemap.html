@@ -1,0 +1,9 @@
+{% extends "index.html" %}
+{% block title %}{{title}}{% endblock %}
+{% block content %}
+    <h1>{{title}}</h1>
+    <ul>{% for link in links %}
+    <li><a href="/{{link}}">Article {{link}}</a> | <a href="/map/{{link}}">Map {{link}}</a></li>
+    {% endfor %}
+    </ul>
+{% endblock %}
