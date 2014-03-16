@@ -1,5 +1,8 @@
 import random
 
+#WORDS = "banane fromage lasagne ravioli carotte".split()
+WORDS = [x.strip() for x in open("/home/mariedam/webapps/infinity/htdocs/words")]
+
 def add_link(x):
 	if random.randint(0,10) == 1:
 		x = '<a href="/{x}">{x}</a>'.format(x=x)
@@ -10,9 +13,9 @@ def add_link(x):
 	return x
 
 def generate(x):
+	global WORDS
 	random.seed(x)
-	words = [x.strip() for x in open('words')]
-	return ' '.join(map(add_link,[random.choice(words) for x in xrange(random.randint(300,400))]))
+	return ' '.join(map(add_link,[random.choice(WORDS) for x in xrange(random.randint(300,400))]))
 	
 if __name__ == "__main__":
     print(generate("dadamien"))
