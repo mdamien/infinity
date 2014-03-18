@@ -12,7 +12,7 @@ def siemap_index():
 def sitemap(x):
     if 'Wget' in request.user_agent.string:
         return ""
-    elrange = range(ord("a"),ord("z"))+range(ord("A"),ord("Z"))
+    elrange = range(ord("a"),ord("z")+1)+range(ord("A"),ord("Z")+1)
     return render_template("sitemap.html",title=x,links=[x+chr(c) for c in elrange])
 
 @app.route("/")
