@@ -1,4 +1,4 @@
-infinity
+Infinity
 ========
 
 Infinite depth website made with Flask
